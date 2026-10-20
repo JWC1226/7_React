@@ -1,9 +1,10 @@
-// JSX 안에서 자바스크립트 문법을 사용하려면 중괄호 {} 안에 작성할 수 있다!
+// JSX 안에서 자바스크립트 문법을 사용하려면
+    // 중괄호 {} 안에 작성할 수 있다!
 function Example() {
     const name = '사용자'
     const age = 21
     const hobbies = ["운동", "산책", "러닝"]
-    const user = {nickname: ''}
+    const user = {nickname: '닉네임', level: 10}
 
     function welcome(who) {
         return `${who}님, 환영합니다!`
