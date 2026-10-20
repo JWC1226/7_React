@@ -6,7 +6,7 @@
 function Example() {
     const boxStyle = {
         backgroundColor: 'darkgray',
-        padding: 12,        // 
+        padding: 12,        // 크기는 기본 단위: px
         boardRadius: 8
     }
     return (
