@@ -24,7 +24,9 @@ function TodoList({todos}) {
                 {
                     todos.map((todo)=>{
                     //todo => {id: xx, title: xx, /...}
-                        <TodoItem key={todo.id} todo={todo} />
+                        return (
+                            <TodoItem key={todo.id} todo={todo} />
+                        )
                     })
                 }
             </List>

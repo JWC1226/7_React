@@ -29,7 +29,7 @@ const Select = styled.select`
   color: var(--text-h);
 `
 
-function TodoForm() {
+function TodoForm({defaultCategory}) {
     const [title, setTitle] = useState('')
     const [memo, setMemo] = useState('')
     const [category, setCategory] = useState('study')
