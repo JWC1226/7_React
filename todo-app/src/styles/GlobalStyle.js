@@ -21,5 +21,4 @@ const GlobalStyle = createGlobalStyle`
     font: inherit;
   }
 `
-
 export default GlobalStyle

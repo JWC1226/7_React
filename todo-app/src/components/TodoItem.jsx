@@ -1,0 +1,40 @@
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { Badge, Button } from "../styles/common";
+import { CATEGORIES } from "../constants";
+import { useTodoStore } from "../store/useTodoStore";
+
+const Item = styled.li`
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--divider);
+  &:last-child {
+    border-bottom: none;
+  }
+`
+const Title = styled(Link)`
+  flex: 1;
+  text-decoration: ${({ $done }) => ($done ? 'line-through' : 'none')};
+  color: ${({ $done }) => ($done ? 'var(--done)' : 'inherit')};
+  &:hover {
+    color: var(--primary);
+  }
+`
+
+function TodoItem({todo}) {
+    const toggleTodo = useTodoStore((state) => state.toggleTodo)
+    const deleteTodo = useTodoStore((state) => state.deleteTodo)
+    return(
+        <Item>
+            <input type="checkbox" checked={todo.done} onChange={() => toggleTodo(todo.id)}/>
+            <Title to={`/todos/${todo.id}`} $done={todo.done}>
+                {todo.title}
+            </Title>
+            <Badge>{CATEGORIES[todo.category]?.label ?? todo.category}</Badge>
+            <Button $variant="danger" onClick={() => deleteTodo(todo.id)}>삭제</Button>
+        </Item>
+    )
+}
+export default TodoItem

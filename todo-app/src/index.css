@@ -11,6 +11,18 @@
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
+  /* todo-app 색상 토큰 */
+  --surface: #fff;
+  --divider: #eef0f4;
+  --input-border: #d5dae3;
+  --muted: #8b93a1;
+  --done: #a0a7b4;
+  --sub-text: #444;
+  --primary: #4f6ef7;
+  --primary-soft: #e8ecff;
+  --danger: #e5484d;
+  --card-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
@@ -43,6 +55,17 @@
     --social-bg: rgba(47, 48, 58, 0.5);
     --shadow:
       rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+
+    --surface: #1f2028;
+    --divider: #2e303a;
+    --input-border: #3a3d4a;
+    --muted: #9ca3af;
+    --done: #6b7280;
+    --sub-text: #d1d5db;
+    --primary: #6b8afd;
+    --primary-soft: rgba(107, 138, 253, 0.18);
+    --danger: #f06368;
+    --card-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
   }
 
   #social .button-icon {

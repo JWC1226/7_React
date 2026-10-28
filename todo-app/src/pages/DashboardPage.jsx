@@ -11,7 +11,7 @@ const Stats = styled.div`
 const StatNumber = styled.div`
   font-size: 28px;
   font-weight: 700;
-  color: #4f6ef7;
+  color: var(--primary);
 `
 const SectionTitle = styled.h2`
   font-size: 18px;
@@ -24,11 +24,11 @@ const CategoryGrid = styled.div`
 `
 const CategoryCard = styled(Link)`
   display: block;
-  background: #fff;
+  background: var(--surface);
   border-radius: 12px;
   padding: 16px;
   text-align: center;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--card-shadow);
   &:hover {
     transform: translateY(-2px);
   }
