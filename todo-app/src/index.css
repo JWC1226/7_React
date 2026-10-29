@@ -22,6 +22,9 @@
   --primary-soft: #e8ecff;
   --danger: #e5484d;
   --card-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  --app-bg: #f4f6fa;
+  --app-text: #222;
+  --card-bg: var(--surface);
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
@@ -66,6 +69,8 @@
     --primary-soft: rgba(107, 138, 253, 0.18);
     --danger: #f06368;
     --card-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    --app-bg: #16171d;
+    --app-text: #f3f4f6;
   }
 
   #social .button-icon {
@@ -81,7 +86,6 @@ body {
   width: 1126px;
   max-width: 100%;
   margin: 0 auto;
-  text-align: center;
   border-inline: 1px solid var(--border);
   min-height: 100svh;
   display: flex;

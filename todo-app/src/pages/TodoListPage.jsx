@@ -38,7 +38,6 @@ function TodoListPage() {
         <>
             <PageTitle>할 일 목록</PageTitle>
             <TodoForm />
-            {/*TODO: 할 일 작성 폼*/}
             <Filters>
                 {
                     FILTERS.map(({key, label}) => {

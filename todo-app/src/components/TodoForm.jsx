@@ -32,7 +32,7 @@ const Select = styled.select`
 function TodoForm({defaultCategory}) {
     const [title, setTitle] = useState('')
     const [memo, setMemo] = useState('')
-    const [category, setCategory] = useState('study')
+    const [category, setCategory] = useState(defaultCategory ?? 'study')
 
     const addTodo = useTodoStore((state) => state.addTodo)
     const handleSubmit = (e) => {

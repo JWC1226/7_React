@@ -10,20 +10,23 @@ const Field = styled.div`
 `
 const Label = styled.div`
   font-size: 13px;
-  color: #8b93a1;
+  color: var(--muted);
   margin-bottom: 4px;
 `
 const Input = styled.input`
   width: 100%;
   padding: 8px 10px;
-  border: 1px solid #d5dae3;
+  border: 1px solid var(--input-border);
   border-radius: 8px;
+  background: var(--surface);
+  color: var(--text-h);
 `
 const Select = styled.select`
   padding: 8px 10px;
-  border: 1px solid #d5dae3;
+  border: 1px solid var(--input-border);
   border-radius: 8px;
-  background: #fff;
+  background: var(--surface);
+  color: var(--text-h);
 `
 const Buttons = styled.div`
   display: flex;
@@ -120,7 +123,7 @@ function TodoDetailPage() {
 
                     <Field>
                     <Label>메모</Label>
-                    <div>{todo.memo}</div>
+                    <div>{todo.memo || '(메모 없음)'}</div>
                     </Field>
 
                     <Field>
@@ -138,7 +141,7 @@ function TodoDetailPage() {
 
                     <Field>
                     <Label>생성일</Label>
-                    <div>{todo.createdAt}</div>
+                    <div>{new Date(todo.createdAt).toLocaleString()}</div>
                     </Field>
 
                     <Buttons>
