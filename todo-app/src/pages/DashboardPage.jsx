@@ -53,9 +53,7 @@ function DashboardPage() {
                 </Card>                                
             </Stats>
             <SectionTitle>카테고리별</SectionTitle>
-            <CategoryGrid>
-                .
-            </CategoryGrid>
+            <CategoryGrid></CategoryGrid>
             <SectionTitle>최근 Todo</SectionTitle>
             {/*TODO: 할 일 목록 표시*/}
         </>
