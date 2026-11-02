@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-
 import { Link, Outlet } from 'react-router-dom'
 
 const Header = styled.header`
@@ -30,5 +29,4 @@ function Layout() {
         </>
     )
 }
-
 export default Layout

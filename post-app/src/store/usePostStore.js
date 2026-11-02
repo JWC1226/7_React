@@ -36,8 +36,10 @@ const usePostStore = create((set)=>{
                 set({error: e.message, loading: false})
             }
          },
-         addPost: (data)=>{
+         addPost: async (data)=>{
             // 게시글 추가
+            const created = await postApi.addPost(data)
+            set((s) => ({posts: [{...created, id: Date.now()}, ...s.posts]}))
          },
          editPost: (id, data)=>{
             // 게시글 수정
