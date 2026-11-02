@@ -1,10 +1,12 @@
-import {useParams} from "react-router-dom"
+import { useParams, navigate } from "react-router-dom"
 import { getPost } from "../api/postApi"
 import { useEffect } from "react"
+import usePostStore from "../store/usePostStore"
 
 function EditPostPage() {
     const {id} = useParams()
     const [post, setPost] = useState(null)
+    const editPost = usePostStore((s)=>s.editPost)
 
     useEffect(()=>{
         getPost(id).then((data)=>{
@@ -12,12 +14,20 @@ function EditPostPage() {
             setPost(data)
         })
     }, [])
+    const handleClick = async () => {
+        try {
+            await editPost(id, post)
+            navigate('/posts')
+        } catch (e) {
+            alert(`수정 실패: ${e.message}`)
+        }
+    }
 
     return (
         <>
             EditPost
             <input type="text" placeholder="닉네임 입력"
-                   value={Post?.userId} onChange={(e)=>setPost({...s, userId: e.target.value})}/>
+                   value={Post?.userId} onChange={(e)=>setPost({...s, userId: e.target.value})} />
             <input type="tect" placeholder="제목 입력"
                    value={Post?.title} onChange={(e)=>setPost({...s, title: e.target.value})} />
             <br/>
