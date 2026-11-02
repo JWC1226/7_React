@@ -13,6 +13,10 @@ const Stats = styled.div`
   margin-bottom: 24px;
 `
 
+const StatCard = styled(Card)`
+  text-align: center;
+`
+
 const StatNumber = styled.div`
   font-size: 28px;
   font-weight: 700;
@@ -59,18 +63,18 @@ function DashboardPage() {
       <PageTitle>대시보드</PageTitle>
 
       <Stats>
-        <Card>
+        <StatCard>
           <div>전체</div>
           <StatNumber>{todos.length}</StatNumber>
-        </Card>
-        <Card>
+        </StatCard>
+        <StatCard>
           <div>완료</div>
           <StatNumber>{filterdDone.length}</StatNumber>
-        </Card>
-        <Card>
+        </StatCard>
+        <StatCard>
           <div>남은 일</div>
           <StatNumber>{todos.length - filterdDone.length}</StatNumber>
-        </Card>
+        </StatCard>
       </Stats>
 
       <SectionTitle>카테고리별</SectionTitle>
